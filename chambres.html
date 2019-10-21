@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HotelCop | Chambres</title>
+    <meta name="author" content="Hellal A & Deslandes Jb">
+    <meta name="description" content="Réservez votre séjour chez HotelCop : Chambres, Suites, restaurants, Spa. | Voir nos différentes offres de chambres">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HotelCop - Réalisé par Hellal A & Deslandes Jb">
+    <meta property="og:url" content="http://www.deslandesjb.fr/">
+    <meta property="og:image" content="http://www.deslandesjb.fr/img/logo/opengraph.jpg">
+    <meta property="og:site_name" content="HotelCop">
+    <meta property="og:description" content="HotelCop - Site FRONT réalisés par Hellal Amirouche & Deslandes Jb dans le cadre de notre formation IFOCOP.">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7CThasadith" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- Mes styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chambres.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container-fluid col-xl-10">
+        <header class="blog-header py-3">
+            <div class="row col-xl-12">
+                <div class="col-sm-4 d-lg-flex justify-content-start align-items-center d-none">
+                    <a class="text-muted no-link" id="search" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"
+                            focusable="false" role="img">
+                            <title>Search</title>
+                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                            <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+                        </svg>
+                    </a>
+                    <form id="form-search">
+                        <input type="text" name="search" class="form-control" placeholder="Recherche">
+                    </form>
+                </div>
+                <div class="col-sm-4 d-lg-flex justify-content-center align-items-center d-none">
+                    <a class="blog-header-logo text-dark lien-head logo no-link" href="index.html">
+                        <img src="img/logo/logo.png" alt="logo">
+                        HotelCop
+                    </a>
+                </div>
+                <div class="row col-sm-4 d-lg-flex justify-content-end align-items-center d-none">
+                    <button type="button" class="btn reservation btn-beige" data-toggle="modal" data-target="#modalReservation">
+                        Réservation
+                    </button>
+                    <div class="mx-2">
+                        <select class="form-control">
+                            <option>Fr</option>
+                            <option>An</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-beige" data-toggle="modal" data-target="#modalPanier">
+                        <i class="fas fa-shopping-cart mx-1"></i>
+                    </button>
+                    <div class="d-none d-lg-block number_panier panier_place">2</div>
+                </div>
+            </div>
+            <div class="row d-lg-none">
+                <!-- MOBILE HEADER-->
+                <div class="col-8">
+                    <a class="blog-header-logo text-dark lien-head logo no-link" href="index.html">
+                        <img src="img/logo/logo.png" alt="logo">
+                        HotelCop
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                    <button type="button" class="btn btn-beige panier-resp" data-toggle="modal" data-target="#modalPanier">
+                        <i class="fas fa-shopping-cart mx-1"></i>
+                    </button>
+                    <div class="d-lg-none number_panier panier_place_resp">2</div>
+                </div>
+            </div>
+        </header>
+        <!-- Nav mobile -->
+        <nav class="navbar  row navbar-expand-lg navbar-light d-lg-none py-3 px-2" id="navmobile">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button type="button" class="btn reservation btn-reservation btn-beige" data-toggle="modal" data-target="#modalReservation">
+                Réservation
+            </button>
+            <a class="text-muted no-link" id="search2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3" focusable="false" role="img">
+                    <title>Search</title>
+                    <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                    <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+                </svg>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav justify-content-between w-100">
+                    <!-- Chambres -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-link" href="#" id="chambresMobile" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Chambres
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="chambresMobile">
+                            <a class="dropdown-item no-link text-muted" href="chambres.html">Nos chambres</a>
+                            <a class="dropdown-item no-link text-muted" href="chambre-classique.html">Classique</a>
+                            <a class="dropdown-item no-link text-muted" href="chambre-confort.html">Confort</a>
+                            <a class="dropdown-item no-link text-muted" href="chambre-delux.html">Delux</a>
+                            <a class="dropdown-item no-link text-muted" href="chambre-suite.html">Suite</a>
+                        </div>
+                    </li>
+                    <!-- Resto -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-link" href="#" id="restoMobile" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Restaurants
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="restoMobile">
+                            <a class="dropdown-item no-link text-muted" href="restaurant.html">Notre restaurant</a>
+                            <a class="dropdown-item no-link text-muted" href="carte-brasserie.html">Carte brasserie</a>
+                            <a class="dropdown-item no-link text-muted" href="carte-degustation.html">Carte dégustation</a>
+                            <a class="dropdown-item no-link text-muted" href="carte-restaurant.html">Carte restaurants</a>
+                        </div>
+                    </li>
+                    <!-- Spa -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-link" href="#" id="spaMobile" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Spa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="spaMobile">
+                            <a class="dropdown-item no-link text-muted" href="spa.html">Nos différents spa</a>
+                            <a class="dropdown-item no-link text-muted" href="soin-detente.html">Soin détente</a>
+                            <a class="dropdown-item no-link text-muted" href="soin-decouverte.html">Soin découverte</a>
+                            <a class="dropdown-item no-link text-muted" href="soin-relaxant.html">Soin relaxant</a>
+                            <a class="dropdown-item no-link text-muted" href="soin-plaisir.html">Soin plaisir</a>
+                            <a class="dropdown-item no-link text-muted" href="soin-evasion.html">Soin évasion</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-link" href="contact.html">Accès/Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-link" href="evenements.html">Evenements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-link" href="presse.html">Presse</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-link" href="#" id="langMobile" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Langue
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="restoMobile">
+                            <a class="dropdown-item no-link text-muted" href="#">Francais</a>
+                            <a class="dropdown-item no-link text-muted" href="#">Anglais</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav> <!-- FIN NAV MOBILE -->
+        <form id="form-search2" class="d-lg-none row">
+            <input type="text" name="search" class="form-control" placeholder="Recherche">
+        </form>
+        <!-- NAV 960 + -->
+        <nav class="row justify-content-between d-none d-lg-flex">
+            <div class="dropdown-ho">
+                <a href="chambres.html" class="btn btn-lg" id="chambres" role="button" aria-pressed="true">Chambres</a>
+                <div class="dropdown-menu menu-ho" aria-labelledby="chambres">
+                    <div class="d-flex justify-content-around menu-ho">
+                        <div>
+                            <a class="dropdown-item sous-m" href="chambre-classique.html">Classique
+                                <div class="i-carre">
+                                    <img src="img/chambres/05.jpg" alt="Chambre classique">
+                                </div></a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item sous-m" href="chambre-confort.html">Confort
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/chambres/08.jpg" alt="Chambre confort">
+                                </div></a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item sous-m" href="chambre-delux.html">Delux
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/chambres/09.jpg" alt="Chambre delux">
+                                </div></a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item sous-m" href="chambre-suite.html">Suite
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/chambres/01.jpg" alt="Suite">
+                                </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Resto -->
+            <div class="dropdown-ho">
+                <a href="restaurant.html" class="btn btn-lg" id="resto" role="button" aria-pressed="true">Restaurant</a>
+                <div class="dropdown-menu menu-ho" aria-labelledby="resto">
+                    <div class="d-flex justify-content-around menu-ho">
+                        <div>
+                            <a class="dropdown-item sous-m" href="carte-brasserie.html">Carte
+                                brasserie
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/restaurant/05.jpg" alt="Carte brasserie">
+                                </div></a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item sous-m" href="carte-degustation.html">Carte
+                                dégustation
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/restaurant/09.jpg" alt="Carte classique">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item sous-m" href="carte-restaurant.html">Carte
+                                restaurants
+                                <div class="i-carre">
+                                    <img class="d-block" src="img/restaurant/07.jpg" alt="Carte restaurant">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SPA -->
+            <div class="dropdown-ho">
+                <a href="spa.html" class="btn btn-lg" id="spa" role="button" aria-pressed="true">Spa</a>
+                <div class="dropdown-menu menu-ho" aria-labelledby="spa">
+                    <div class="d-flex justify-content-around menu-ho">
+                        <div class="spa">
+                            <a class="dropdown-item sous-m" href="soin-detente.html">Soin détente
+                                <div class="i-carre2">
+                                    <img class="d-block" src="img/spa/01.jpg" alt="Soin détente">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="spa">
+                            <a class="dropdown-item sous-m" href="soin-decouverte.html">Soin découverte
+                                <div class="i-carre2">
+                                    <img class="d-block" src="img/spa/02.jpg" alt="Soin découverte">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="spa">
+                            <a class="dropdown-item sous-m" href="soin-relaxant.html">Soin relaxant
+                                <div class="i-carre2">
+                                    <img class="d-block" src="img/spa/03.jpg" alt="Soin relaxant">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="spa">
+                            <a class="dropdown-item sous-m" href="soin-plaisir.html">Soin plaisir
+                                <div class="i-carre2">
+                                    <img class="d-block" src="img/spa/07.jpg" alt="Soin plaisir">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="spa">
+                            <a class="dropdown-item sous-m" href="soin-evasion.html">Soin évasion
+                                <div class="i-carre2">
+                                    <img class="d-block" src="img/spa/05.jpg" alt="Soin évasion">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="contact.html" class="btn btn-lg" role="button" aria-pressed="true">Accès / Contact</a>
+            </div>
+            <div>
+                <a href="evenements.html" class="btn btn-lg" role="button" aria-pressed="true">Evenements</a>
+            </div>
+            <div>
+                <a href="presse.html" class="btn btn-lg" role="button" aria-pressed="true">Presse</a>
+            </div>
+        </nav>
+    </div> <!-- div container-fluid col-xl-10 -->
+
+
+    <!--CONTENUE ICI-->
+
+    <section class="container-fluid col-xl-10">
+        <!-- En tete -->
+        <div class=" pb-3">
+            <div class="shoresto">
+                <h3>Nos chambres</h3>
+                <img src="img/chambres/00.jpg" alt="Nos chambres">
+            </div>
+            <h5 class="col-md-9 mx-auto text-center pt-3">Découvrez tout ce qui fait de notre hôtel le premier "Palace"
+                de France et le rend unique en son genre : son spa, sa piscine sur le toit ou encore son élégant jardin
+                où souvent se cache le plus félin de nos résidents.</h5>
+        </div>
+
+
+    </section>
+    <section class="bandeau">
+        <div class="container-fluid row justify-content-around py-4 ">
+            <div class="mx-auto">
+                <h3 class="text-center">Chambre Classique</h3>
+                <div class="i-rond">
+                    <img class="img1" src="img/chambres/01.jpg" alt="classique">
+                </div>
+                <a href="chambre-classique.html" class="w-100 btn btn-beige my-4">Voir</a>
+                <p class="w360 text-center my-4">Avec leurs 40 m2 tout en lumière, les chambres d'HotelCop Paris sont
+                    parmi les plus spacieuses de Paris dans leur catégorie. Vastes, mais également très raffinées. Le
+                    mélange des matières précieuses, les tonalités pastel, parme, bleu, rosé… la finesse et la légèreté
+                    des lignes du mobilier Louis XV ou Louis XVI, donnent à cet ensemble une élégante harmonie.<br>
+                    Les tissus aux motifs fleuris, délicats et apaisants, signés Manuel Canovas, Frey ou Thorp of
+                    London, rappellent les narcisses et les azalées du jardin intérieurs. Les grandes salles de bain
+                    sont équipées d’une douche séparée et d'une double vasque.<br>
+                    Chaque chambre à sa propre personnalité. Toutes différentes, elles sont décorées avec soin, comme
+                    vous l’auriez fait pour votre propre maison.</p>
+            </div>
+            <div class="mx-auto">
+                <h3 class="text-center">Chambre Confort</h3>
+                <div class="i-rond">
+                    <img class="img2" src="img/chambres/02.jpg" alt="confort">
+                </div>
+                <a href="chambre-confort.html" class="w-100 btn btn-beige my-4">Voir</a>
+                <p class="w360 text-center my-4">Vastes, 45m², les chambres Deluxe peuvent s’agrandir de plusieurs
+                    chambres communicantes, pour accueillir une famille dans le plus grand confort. Si chacune est
+                    unique, toutes offrent un intérieur lumineux aux tons pastel et sont décorées de meubles de style
+                    Louis XV et Louis XVI et de gravures, tableaux et miroirs d'époque.<br>
+                    Les tissus sont signés Frey, Canovas ou Brunschwig. Les vastes salles de bain possèdent une douche
+                    séparée et une double vasque. Les fenêtres s’ouvrent sur les boutiques chic de la rue du Faubourg
+                    Saint-Honoré.<br>
+                    Très chic, très français, terriblement HotelCop.</p>
+            </div>
+            <div class="mx-auto">
+                <h3 class="text-center">Chambre Delux</h3>
+                <div class="i-rond">
+                    <img class="img3" src="img/chambres/03.jpg" alt="delux">
+                </div>
+                <a href="chambre-delux.html" class="w-100 btn btn-beige my-4">Voir</a>
+                <p class="w360 text-center my-4">Lorsqu'on pousse la porte d'une chambre Prestige à HotelCop Paris,
+                    l’ambiance qui s’en dégage au premier regard est chaleureuse, élégante et feutrée. Les tissus
+                    signés Manuel Canovas ou Rubelli y sont précieux, les tonalités douces et lumineuses.<br>
+                    Avec une vue sur les calmes cours intérieures ou sur la rue du Faubourg Saint-Honoré, les chambres
+                    prestiges possèdent un coin salon confortable, sont équipées d'une douche séparée et d'une double
+                    vasque, chaque chambre prestige est unique.</p>
+            </div>
+            <div class="mx-auto">
+                <h3 class="text-center">Suite</h3>
+                <div class="i-rond">
+                    <img class="img4" src="img/chambres/04.jpg" alt="suite">
+                </div>
+                <a href="chambre-suite.html" class="w-100 btn btn-beige my-4">Voir</a>
+                <p class="w360 text-center my-4">Comme la ville dont elle porte le nom, cette somptueuse suite est une
+                    leçon de style. Richement décorée de meubles Louis XV et Louis XVI, son salon s’orne de tissus en
+                    soies brodées de la prestigieuse manufacture Colefax dans des tons éclatants jaunes, bleu et
+                    rouges. La chambre, est drapée de tissus moirés or de chez Thorp of London. Située au 6ème étage du
+                    Palace, à l'angle de l'avenue Matignon et de la célèbre rue du Faubourg Saint-Honoré, la suite
+                    Paris offre une vue imprenable sur la ville lumière et la Tour Eiffel depuis le balcon en fer forgé
+                    qui la ceinture.<br>
+                    La salle de bain possède une douche séparée, une double vasque et un hammam. Sa salle à manger
+                    privée, invitation à déguster la cuisine exceptionnelle du Bristol Paris imaginée par le Chef
+                    Frechon, achèvent de faire de cette suite un lieu d'exception. La Suite Paris peut se prolonger
+                    d'une chambre supplémentaire, pour composer un merveilleux espace de 196 m2.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--FIN CONTENUE-->
+
+    <footer class="footer w-100 container-fluid">
+        <!-- Adresse -->
+        <div class="row col-11 mx-auto">
+            <div class="col-md-3">
+
+                <h5><img class="logo2 mr-2" src="img/logo/logo2.png" alt="logo">HotelCop</h5> <br>
+                <p>
+                    1 avenue Montaigne <br>
+                    75008 Paris <br>
+                    <br>
+                    <a href="tel:+33101010101"> +33 (0)1 01 01 01 01</a> <br>
+                    <a href="mailto:contact@hotelcop.com">contact@hotelcop.com</a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h5><a href="presse.html">PRESSE</a></h5>
+                <h5>HotelCop</h5>
+                <a href="qui.html">Qui sommes-nous ?</a> <br>
+                <a href="contact.html">Nous contacter</a> <br>
+                <a href="recrutement.html">Recrutement</a> <br>
+                <a href="javascript:window.print()">Imprimer</a> <br>
+            </div>
+            <div class="col-md-3">
+                <h5>RECEVOIR LA NEWSLETTER</h5>
+                <form class="row mx-1 form-newsletter" method="GET" action="#">
+                    <input class="form-control col-8" type="email" name="adresse_mail" id="newsletter-subscription"
+                        placeholder="Email">
+                    <button type="submit"><i class="far fa-arrow-alt-circle-right"></i></button>
+                </form> <br>
+                <h5><a href="plan.html">Plan du site</a></h5>
+                <h5><a href="actu.html">Actualités</a></h5>
+            </div>
+            <div class="col-md-3">
+                <h5>Site réalisés par:</h5>
+                <a href="http://www.amirouchecodeur.fr/cv/">Hellal Amirouche</a><br>
+                <a href="http://www.jbdeveloppeurweb.fr/">Deslandes Jb</a> <br>
+            </div>
+        </div>
+        <div class="row justify-content-between col-11 mx-auto">
+            <div>
+                <button type="button" class="btn text-white btn-footer p-0" data-toggle="modal" data-target="#modalMentions">Mentions
+                    légales
+                </button>
+                <button type="button" class="btn text-white btn-footer p-0 ml-3" data-toggle="modal" data-target="#modalConditions">Conditions</button>
+            </div>
+            <div>
+                <a class="no-link mx-2" href="https://twitter.com/?lang=fr"><i class="fab fa-twitter"></i></a>
+                <a class="no-link mx-2" href="https://plus.google.com/"><i class="fab fa-google"></i></a>
+                <a class="no-link mx-2" href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="no-link mx-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a class="no-link mx-2" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div>
+                <p>© 2018 HotelCop. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- MODAL RESERVATION -->
+
+    <div class="modal fade" id="modalReservation" tabindex="-1" role="dialog" aria-labelledby="modalReservationLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalReservationLabel">RESERVATION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action='#' method='GET'>
+                        <div class="form-group">
+                            <label for="startDate">Arrivée:</label>
+                            <input id="startDate" name="arrive" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">Départ: </label>
+                            <input id="endDate" name="depart" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="styleChambre">Style de chambre</label>
+                            <select class="form-control" name="style_de_chambre" id="styleChambre">
+                                <option>Chambre Classique</option>
+                                <option>Chambre Confort</option>
+                                <option>Chambre Delux</option>
+                                <option>Suite</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nbPersonnes">Nombre de personnes</label>
+                            <select class="form-control" name="Nombre_de_personnes" id="nbPersonnes">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-black" data-dismiss="modal">Fermer</button>
+                            <button type="submit" class="btn btn-beige">Reserver</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- fin modale de réservation -->
+    <!-- modal panier -->
+    <!-- modal panier -->
+    <div class="modal fade" id="modalPanier" tabindex="-1" role="dialog" aria-labelledby="modalPanierLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPanierLabel">
+                        <i class="fas fa-shopping-cart mx-1"></i> Mon Panier</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenue Modal -->
+                    <div class="fluid-container">
+                        <div class="card-body">
+                            <!-- PRODUITS -->
+                            <!-- premier produit -->
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <img class="img-fluid" src="img/chambres/07.jpg" alt="prewiew">
+                                </div>
+                                <div class="col-6">
+                                    <h4 class="product-name">CHAMBRE CONFORT</h4>
+                                    <h4>
+                                        <a href="chambre-confort.html" class="text-primary small no-link">Voir la
+                                            description</a>
+                                    </h4>
+                                    <div class="row">
+                                        <div class="d-flex">
+                                            <input type="button" value="+" class="plus">
+                                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="input-group input-group-lg text-center">
+                                            <input type="button" value="-" class="minus">
+                                        </div>
+                                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                                            <button type="button" class=" btn corbeille btn-outline-danger btn-xs">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Deuxieme produit -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid" src="img/restaurant/07.jpg" alt="prewiew">
+                                </div>
+                                <div class="col-6">
+                                    <h4 class="product-name">CARTE RESTAURANT</h4>
+                                    <h4>
+                                        <a href="carte-restaurant.html" class="text-primary small no-link">Voir la
+                                            description</a>
+                                    </h4>
+                                    <div class="row">
+                                        <div class="d-flex">
+                                            <input type="button" value="+" class="plus">
+                                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="input-group input-group-lg text-center">
+                                            <input type="button" value="-" class="minus">
+                                        </div>
+                                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                                            <button type="button" class="btn corbeille btn-outline-danger btn-xs">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-black" data-dismiss="modal">Retour</button>
+                        <a class="btn btn-beige" href="panier.html">Payer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modale de mentions légales -->
+    <div class="modal fade" id="modalMentions" tabindex="-1" role="dialog" aria-labelledby="modalMentionsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMentionsLabel">Mentions légales</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenue Modal -->
+
+                    <h5>Présentation générale :</h5>
+                    <p>Vous êtes actuellement connecté au site HotelCop, site réalisé par Hellal Amirouche et Deslandes
+                        Jean-Baptiste dans le cadre de notre formation IFOCOP </p>
+                    <h5>Dénomination sociale :</h5>
+
+                    <p>Sarl HotelCop (restaurant- Bar) <br>
+                        GIE le Saint Georges (hôtel)<br>
+
+
+                        Adresse : 1 avenue Montaigne 75008 Paris <br>
+                        Directeur de la publication : IFOCOP <br>
+
+                        Tel. : 01.01.01.01.01<br>
+                        Fax. : 01.01.01.01.01<br></p>
+
+                    <h5>Présentation générale</h5>
+
+                    <p>Vous êtes actuellement connecté au site HotelCop édité par la SARL<br>
+
+                        HotelCop au capital social de 50 €.<br>
+
+                        Immatriculé au RCS BLOIS sous le numéro 012 345 678 <br>
+
+                        Siret : 012 012 012 012 01 <br>
+
+                        TVA intra-communautaire : FR 01010101010 <br>
+
+                        APE : 0123 A <br>
+
+                        Adresse : 1 avenue Montaigne 75008 Paris <br>
+
+                        Directeur de la publication : IFOCOP <br>
+
+                        Tel. : 01.01.01.01.01 <br>
+
+                        Fax. : 01.01.01.01.01<br>
+
+                        L'éditeur s'engage à respecter l'ensemble des lois concernant la mise en place et l'activité
+                        d'un site Internet.<br></p>
+                    <h5>Informations techniques :</h5>
+                    <p>Il est rappelé que le secret des correspondances n'est pas garanti sur le réseau Internet et
+                        qu'il appartient à chaque utilisateur d'Internet de prendre toutes les mesures appropriées de
+                        façon à protéger ses propres données et/ou logiciels de la contamination d'éventuels virus
+                        circulant sur Internet.<br></p>
+                    <h5>Charte éditoriale:</h5>
+                    <p>Le site HotelCop est un site de présentation des services proposés par HotelCop. Il est complété
+                        par des outils de simulation. <br>
+                        Les informations fournies dans ce site ne sont données qu'à titre indicatif. <br>
+
+                        Hôtel - Restaurant - Spa HotelCop <br>
+                        Adresse : 1 avenue Montaigne 75008 Paris <br>
+                        Tel. : 01.01.01.01.01<br>
+                        Fax. : 01.01.01.01.01<br></p>
+
+
+                    <h5>ADRESSE MAIL :</h5> contact@hotelcop.fr
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fin modale mentions légales -->
+
+    <!-- conditions générales de vente -->
+    <!-- modal test -->
+
+    <div class="modal fade" id="modalConditions" tabindex="-1" role="dialog" aria-labelledby="modalConditionsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConditionsLabel">Conditions générales de vente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenue Modal -->
+                    <h5>ARTICLE 1 : Application des conditions générales de vente</h5>
+                    Les présentes conditions générales de vente s’appliquent aux prestations fournies par
+                    l’établissement.<br>
+                    Ces conditions générales de ventes sont adressées au client en même temps que le devis, pour
+                    lui
+                    permettre d’effectuer sa réservation. Toute réservation implique donc de la part du client
+                    l’adhésion entière et sans réserve aux présentes conditions à l’exclusion de tout autre
+                    document
+                    tel que prospectus, documents commerciaux, etc.<br>
+                    <h5>ARTICLE II : Réservation – Arrhes</h5>
+
+                    Le client doit confirmer sa réservation avant la date de fin d’option par courrier ou mail
+                    accompagnée d’un versement d’arrhes par chèque ou carte de crédit équivalent à 30 % du montant
+                    du
+                    séjour pour un séjour égal ou supérieur à 3 nuits, 50 % du montant du séjour pour un séjour
+                    inférieur à 3 nuits et 100% du montant du séjour pour un séjour d’1 nuit. A défaut de
+                    versement,
+                    l’établissement ne confirme pas la réservation et ne garantie pas la disponibilité des
+                    espaces/chambres réservées.<br>
+                    ARTICLE III : Organisation de la réservation <br>
+                    – Chambres: Les chambres seront mises à disposition des bénéficiaires à partir de 15 h et
+                    doivent
+                    être libérées le jour du départ à midi. Tout dépassement de ce délai pouvant entraîner la
+                    facturation d’une nuitée supplémentaire. <br>
+                    – Petit-déjeuner: le client doit annuler le nombre de petit-déjeuner au plus tard la veille,
+                    heure
+                    limite 23h. Au-delà, l’hôtel se réserve le droit de facturer les petits-déjeuners même s’ils ne
+                    sont pas consommés. <br>
+                    – No-show: Les » no-shows » (prestations commandées non annulées) seront facturés sur la base
+                    de la
+                    totalité du séjour.<br>
+                    <h5>ARTICLE IV : Long séjour</h5>
+                    En cas de long séjour (supérieur à une semaine), une facturation sera établie par semaine. <br>
+                    <h5>ARTICLE V : Modification des prestations</h5>
+                    Toute demande de modification des prestations par rapport à la réservation faite, devra être
+                    adressée par écrit à l’établissement.. La modification ne pourra être acceptée et confirmée
+                    qu’en
+                    fonction des disponibilités de l’établissement au moment de la demande. <br>
+                    <h5>ARTICLE VI : Annulation totale ou partielle</h5>
+                    <h5>Annulation totale :</h5>
+                    Le changement de date du séjour est considéré comme une annulation totale et donne lieu à
+                    l’application des conditions d’annulation.<br>
+                    Jusqu’à 14 jours avant la date du début du séjour et quel qu’en soit le motif, les arrhes
+                    seront
+                    remboursées.<br>
+                    Moins de 14 jours à 24H de la date d’arrivée, les arrhes seront conservées et à valoir sur un
+                    prochain séjour dans l’année civile.<br>
+                    Passé ce délai, la réservation devient un » no-show » (prestation commandée non annulée ou
+                    annulée
+                    à moins de 24h de l’arrivée), l’intégralité du montant total du séjour vous sera alors demandé.<br>
+                    En cas de force majeur (accident, décès, raisons médicales…), l’hôtel restituera, sur
+                    présentation
+                    d’un justificatif, le montant des arrhes versées.<br>
+                    <h5>Annulation partielle :</h5>
+                    Dans le cas d’un séjour écourté, d’une date d’arrivée décalée, d’un nombre de personnes modifié
+                    ou
+                    de tout autre fait modifiant le contrat de réservation d’origine, les arrhes versées ne seront
+                    ni
+                    remboursées, ni déduites de la facture, celles-ci constituant un moyen de dédit. Le solde du
+                    séjour
+                    initialement réservé sera demandé.<br>
+                    <h5>ARTICLE VII : Délogement</h5>
+                    En cas de force majeure, l’établissement se réserve la possibilité de faire héberger totalement
+                    ou
+                    partiellement les participants dans un hôtel de proximité et de catégorie équivalente pour les
+                    prestations de même nature, les frais inhérents au transfert restant à la charge de
+                    l’établissement, qui ne pourra être recherché en paiement d’une quelconque indemnité
+                    complémentaire.<br>
+                    <h5>ARTICLE VIII : Prix</h5>
+                    Les tarifs sont exprimés en euros TTC. Les tarifs confirmés sur la demande de réservation sont
+                    fermes jusqu’à la date de fin de levée d’option. Passé ce délai, ils sont susceptibles d’être
+                    modifiés en fonction des conditions économiques. Les tarifs applicables sont alors ceux en
+                    vigueur
+                    le jour de la réalisation de la prestation. Ils pourront être modifiés en cas de changement
+                    législatif et/ou réglementaire susceptibles d’entraîner des variations de prix tels que :
+                    modification du taux de TVA applicable, instauration de nouvelles taxes, etc <br>
+                    ARTICLE IX : Séjour promotionnel
+                    Les promotions uniquement sur Internet sont non cumulables, non modifiables, ni annulables et
+                    sont
+                    valables au prix et dates indiquées. Conditions particulières : les informations relatives à la
+                    carte bancaire du client sont nécessaires pour bénéficier de ces promotions. Toute modification
+                    ou
+                    annulation est impossible après la réservation. En cas d’annulation, le montant du fodrfait est
+                    intégralement û. <br>
+                    <h5>ARTICLE X : Modalité de règlement</h5>
+                    Les conditions de règlement du prix se divisent comme suit : <br>
+                    À la fin de votre séjour, les arrhes seront déduites sur la facture finale, pour la période
+                    initialement prévue. Les factures du solde sont payables à réception le jour du départ. Sauf
+                    dispositions contraires, aucun délai de paiement n’est accordé. Le règlement des extras
+                    (blanchisserie, boissons, téléphone, taxe de séjour…) réclamé aux participants, sera assuré par
+                    les
+                    participants concernés avant leur départ. A défaut de règlement, la facture sera adressée au
+                    client
+                    qui s’engage à la régler à la réception.
+                    Tout retard de règlement donnera lieu à la facturation des pénalités de retard égales à 1 fois
+                    et
+                    demi le taux d’intérêt légal en vigueur sans mise en demeure préalable.
+                    <h5>ARTICLE XI : Assurance – détérioration – casse – vol</h5>
+                    Le client doit assurer la garde de ses biens et matériels. Un coffre-fort en chambre est à sa
+                    disposition. Le client devra informer l’établissement de toute dégradation dont il serait à
+                    l’origine. Il est responsable de l’ensemble des dommages causés par son intermédiaire et
+                    s’engage,
+                    en cas de dégradation des lieux mis à disposition, (chambre, espaces communs tels que piscine,
+                    jacuzzi, jardin, salon, sanitaires) à supporter les coûts de remise en état.
+                    <h5>ARTICLE XII : Recommandations</h5>
+                    Le client s’engage à n’inviter aucune personne dont le comportement est susceptible de porter
+                    préjudice à l’établissement, ce dernier se réservant le droit d’intervenir si nécessaire. Le
+                    client
+                    ne pourra apporter de l’extérieur ni boissons, ni denrées alimentaires sans autorisation
+                    préalable
+                    de la direction. Le client s’engage à faire respecter, par les participants et leurs invités,
+                    l’ensemble des consignes et règlements de l’établissement (notamment l’interdiction de fumée).
+                    Le
+                    client veillera à ce que les participants ne perturbent pas l’exploitation de l’établissement
+                    ni ne
+                    portent atteinte à la sécurité de l’établissement ainsi que des personnes qui s’y trouvent.
+                    <h5>ARTICLE XII : Force majeure</h5>
+                    L’établissement pourra se dégager de ses obligations ou en suspendre l’exécution s’il se trouve
+                    dans l’impossibilité de les assumer du fait de la survenance d’un cas de force majeure, et
+                    notamment en cas de destruction totale ou partielle de l’établissement, grève etc…
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin test -->
+
+    <!-- fin de conditions générales de vente -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- script perso -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

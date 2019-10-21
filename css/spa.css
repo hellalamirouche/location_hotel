@@ -1,0 +1,97 @@
+.shospa{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position:relative;
+}
+.shospa h3{
+    position:absolute;
+    position: absolute;
+    width:74px;
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    top:50px;
+    font-size:50px ;
+    color:white;
+
+}
+.shospa img{
+    float:right;
+}
+.w360{
+    max-width:360px;
+}
+.i-rond{
+    max-width:360px;
+    max-height: 360px;
+    overflow: hidden;
+}
+.img1{
+    width:700px;
+	margin-left: -80px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img1:hover{
+    margin-left: -110px;
+}
+.img2{
+    width:700px;
+	margin-left: -80px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img2:hover{
+    margin-left: -110px;
+}
+
+.img3{
+    width:700px;
+	margin-left: -80px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img3:hover{
+    margin-left: -110px;
+}
+.img4{
+    width:700px;
+	margin-left: -150px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img4:hover{
+    margin-left: -180px;
+}
+.img5{
+    width:700px;
+	margin-left: -40px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img5:hover{
+    margin-left: -70px;
+}
+.c-spa{
+    background:#f5f5dc;
+}
+
+
+@media (min-width:768px){
+    .shospa h3{
+    top:15px;
+    width:147px;
+    font-size: 100px;
+    }
+}

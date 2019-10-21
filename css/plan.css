@@ -1,0 +1,42 @@
+.shoplan{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position:relative;
+}
+.shoplan h3{
+    position:absolute;
+    position: absolute;
+    width:235px;
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    top:50px;
+    font-size:50px ;
+    color:white;
+}
+.link-plan{
+    color:black;
+}
+.link-20{
+    font-size: 20px;
+}
+.link-26{
+    font-size: 26px;
+}
+.row ul{
+    width:175px;
+    height:auto;
+    text-align: center;
+    padding:0;
+}
+.row ul li{
+    list-style-type: none;
+}
+@media (min-width:768px){
+    .shoresto h3{
+    top:15px;
+    width:470px;
+    font-size: 100px;
+    }
+}

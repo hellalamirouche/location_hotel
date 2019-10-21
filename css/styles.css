@@ -1,0 +1,329 @@
+/* font-family: 'Thasadith', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Thasadith', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+a{
+    text-decoration:none;
+    color:#f5f5dc;
+}
+a:link{text-decoration:none;}
+a:hover{
+    text-decoration:none
+}
+a:link{
+    background:transparent !important;
+}
+a:visited{
+    background:transparent !important;
+}
+a:active{
+    background:transparent !important;
+}
+::selection{
+    background-color: #444;
+    color: white;
+}
+::-moz-selection {
+    background-color: #444;
+    color: white;
+}
+div .btn-beige{
+    background:#f5f5dc !important;
+    color:black !important;
+    border:1px solid;
+    transition:.4s;
+}
+div .btn-beige:hover{
+    background:#171717 !important;
+    color:white !important;
+}
+div .btn-beige:active{
+    background:#171717 !important;
+    color:white !important;
+}
+div .btn-black{
+    background:#171717 !important;
+    color:white !important;
+    transition:.4s;
+}
+div .btn-black:hover{
+    border:1px solid;
+    background:#f5f5dc !important;
+    color:black !important;
+}
+.bandeau{
+    background:#f5f5dc !important;
+}
+.white{
+    background:white !important;
+    border:1px solid black;
+}
+.dark{
+    background:#171717;
+}
+/* Header */
+
+.lien-head:hover{
+    text-decoration:none;
+    
+}
+.logo{
+    font-size: 36px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.logo img{
+    width:60px;
+    height: 60px;
+    margin-right: 7px;
+}
+#form-search{
+    display:none;
+}
+#form-search2{
+    display:none;
+    margin-bottom:3px;
+}
+.rescolor{
+    
+}
+.reservation{
+    margin-right:4px;
+}
+.panier-resp{
+  width:60px;
+}
+.number_panier{
+    background:black;
+    color:white;
+    font-size:20px;
+    height:30px;
+    width:30px;
+    text-align: center;
+    border-radius:30px;
+}
+.panier_place{
+    position:absolute;
+    bottom:-2px;
+    right:-2px;
+}
+.panier_place_resp{
+    position:relative;
+    bottom:-40px;
+    right:18px;
+}
+/* Nav */
+.btn-reservation{
+    width:200px;
+}
+.dropdown-ho:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-ho>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.menu-ho{
+    width:100%;
+    min-height:200px;
+    top:135px;
+}
+.btn-main{
+    height:40px;
+}
+.sous-m{
+    text-align: center;
+}
+.spa{
+    width:192px;
+}
+.spa a{
+    padding:4px 0;
+}
+.i-carre{
+    width:192px;
+    height:192px;
+    border-radius:192px;
+    overflow: hidden;
+}
+.i-carre img{
+    width:400px;
+}
+.i-carre2{
+    width:192px;
+    height:192px;
+    border-radius:192px;
+    overflow: hidden;
+}
+.i-carre2 img{
+    width:400px;
+}
+#resto1{width:195px;}
+#resto2{width:195px;}
+#resto3{width:195px;}
+nav{
+    margin-bottom:3px;
+}
+#navmobile{
+    background:white ;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#navmobile button.navbar-toggler{
+    background:#f5f5dc;
+}
+/* sticky de la nav mobile*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #navmobile{
+      z-index: 10;
+      
+  }
+  .sticky + .fluid-container {
+    padding-top: 60px;
+  }
+/* CAROUSEL */
+.carousel-item {
+    height: 80vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-caption a{
+    color:white;
+}
+.c-background{
+    background:rgba(245, 245, 220, 0.7);
+    border-radius:20px;
+    color:black;
+}
+.lead{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/*----- button hover border -----*/
+.container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100vh;
+}
+.button-v{
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: black !important;
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  cursor: pointer;
+  margin: 20px 30px;
+}
+.button-v span{
+  display: block;
+  padding: 25px 80px;
+}
+.button-v::before, .button-v::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: black;
+}
+
+span::before, span::after{
+  content:"";
+  width:2px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: black;
+}
+.button-v:hover::before, .button-v:hover::after{
+  width: 100%;
+}
+.button-v:hover span::before, .button-v:hover span::after{
+  height: 100%;
+}
+.btn-3::after{
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.6s;
+}
+.btn-3 span::after{
+  transition-delay: 0.4s;
+  right: 0;
+  bottom: 0;
+}
+.btn-3::before{
+  right: 0;
+  top: 0;
+  transition-delay: 0.2s;
+}
+.btn-3 span::before{
+  transition-delay: 0s;
+  left: 0;
+  top: 0;
+}
+
+.btn-3:hover::after{
+  transition-delay: 0s;
+}
+.btn-3:hover span::after{
+  transition-delay: 0.2s;
+}
+.btn-3:hover::before{
+  transition-delay: 0.4s;
+}
+.btn-3:hover span::before{
+  transition-delay: 0.6s;
+}
+
+
+
+/* FOOTER */
+
+.footer{
+    color:#f5f5dc;
+    min-height:300px;
+    background-color:#171717 ;
+}
+.footer div{
+    padding-top:15px;
+}
+.btn-footer:hover{
+    color:#007bff !important;
+}
+.logo2{
+    width:30px;
+}
+#cookieChoiceInfo {
+    font-size:20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+div.row div.col-md-3 form button{
+    height:38px;
+    width:38px;
+}
+.form-newsletter{
+    max-width:266px;
+}
+.logojb{
+    width:20px;
+}

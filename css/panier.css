@@ -1,0 +1,31 @@
+
+/*css de la page panier*/
+
+@media (min-width:768px) and (max-width:992px){
+
+.nature-produit{
+
+    width:40%;
+}
+.quantite{
+   
+margin-left:10px;
+
+}
+.h4-panier {
+    font-size:1.2em;
+}
+
+.choix-quantite {
+    height: 100%;
+   
+}
+.plus ,.minus{
+    width:19px;
+    margin-top: 22px;
+    text-align:center;
+
+}
+
+}
+

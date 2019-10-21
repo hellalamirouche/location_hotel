@@ -1,0 +1,83 @@
+.shoresto{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position:relative;
+}
+.shoresto h3{
+    position:absolute;
+    position: absolute;
+    width:285px;
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    top:50px;
+    font-size:50px ;
+    color:white;
+
+}
+.shoresto img{
+    float:right;
+}
+.i-rond{
+    max-width:360px;
+    max-height: 360px;
+    overflow: hidden;
+}
+.w360{
+    max-width:360px;
+}
+.img1{
+    width:700px;
+	margin-left: 30px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img1:hover{
+    margin-left: 0;
+}
+.img2{
+    width:600px;
+	margin-left: 90px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img2:hover{
+    margin-left: 60px;
+}
+.img3{
+    width:700px;
+	margin-left: -280px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.img3:hover{
+    margin-left: -310px;
+}
+.img4{
+    width:500px;
+	margin-left: -100px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.img4:hover{
+    margin-left: -130px;
+}
+.c-chambre{
+    background:#f5f5dc;
+}
+@media (min-width:768px){
+    .shoresto h3{
+    top:15px;
+    width:570px;
+    font-size: 100px;
+    }
+}

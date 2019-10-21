@@ -1,0 +1,98 @@
+.titre_video{
+
+    bottom: 276px;
+    
+}
+.eve5{
+    font-size:2em;
+
+ }
+.eve2{
+    font-size:2em;
+}
+.eve3{
+    font-size:3em;
+    color:#f85cb1;
+}
+
+h1, .eve2{
+    color:white;
+    z-index: 1;
+}
+.video-header{
+    height:auto;
+    padding:0px;
+    margin:0;
+   
+
+}
+
+.test{
+ height:50px;
+}
+.test2{
+ width:100%;
+}
+
+.nav_evenement{
+    min-height:70px;
+}
+#button1,#button2,#button3{
+    line-height:70px;
+}
+
+.text-white{
+   height: 10px;
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+
+    .eve3{
+        font-size:2em;
+        color:#f85cb1;
+    }
+     
+    .eve5{
+        font-size:1em;
+    
+     }
+    .titre_video{
+
+      bottom: 137px;
+      
+    }
+
+    #effect1,#plus{
+      margin:auto;
+    }
+
+    .images{
+      width:600px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .eve3{
+        font-size:2em;
+        color:#f85cb1;
+    }
+     
+    .eve5{
+        font-size:1em;
+    
+     }
+    .titre_video{
+
+      bottom: 137px;
+      
+    }
+
+    #effect1,#plus{
+      margin:auto;
+    }
+
+}
+
+ 
